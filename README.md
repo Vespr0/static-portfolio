@@ -2,7 +2,7 @@ This project is a template for a simple portfolio of pictures and p5.js sketches
 
 # Live Demo
 
-https://Vespr0.github.io/static-portfolio/
+https://vespr0.github.io/portfolio/
 
 # Features
 
