@@ -45,3 +45,5 @@ collections:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+kramdown:
+    math_engine: katex
