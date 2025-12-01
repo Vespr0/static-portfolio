@@ -1,0 +1,35 @@
+// Global Reset & Typography
+body {
+  font-family: $base-font-family;
+  background-color: $background-color;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+  color: $text-color;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+  &:hover {
+    text-decoration: none;
+    color: $link-color-hover;
+  }
+}
+
+// Utility
+.text-brand {
+  color: transparent;
+  background: linear-gradient(to right, $brand-color, $brand-secondary);
+  -webkit-background-clip: text;
+  background-clip: text;
+}

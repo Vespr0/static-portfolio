@@ -1,0 +1,76 @@
+// Project Grid
+.img__wrap {
+  position: relative;
+  margin: 1.5em 0;
+  border-radius: 12px;
+  overflow: hidden;
+  // No shadow by default in this flat style
+  background: $card-color-1; // Default fallback
+  aspect-ratio: 16/9; // Enforce aspect ratio
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  transition: transform 0.3s ease;
+  
+  img {
+    width: 60%; // Smaller image/icon style
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+    mix-blend-mode: multiply; // Helps integrate illustrations
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    
+    img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// Pastel Card Coloring Logic (Cycle through 3 colors)
+.col-lg-4:nth-child(3n+1) .img__wrap { background-color: $card-color-1; }
+.col-lg-4:nth-child(3n+2) .img__wrap { background-color: $card-color-2; }
+.col-lg-4:nth-child(3n+3) .img__wrap { background-color: $card-color-3; }
+
+// Description Layer - Modified for this style
+// In the reference, text is BELOW the card, not an overlay.
+// But keeping the overlay structure for now, just making it cleaner.
+.img__description_layer {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.05); // Very subtle darken
+  color: $text-color;
+  opacity: 0;
+  display: flex;
+  align-items: flex-end; // Text at bottom
+  padding: 1.5rem;
+  transition: opacity 0.3s ease;
+}
+
+.img__wrap:hover .img__description_layer {
+  opacity: 1;
+}
+
+.img__description {
+  font-family: $base-font-family;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: $text-color;
+  transform: translateY(0); // No movement
+}
+
+// Code Blocks
+pre, code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  background-color: $code-background-color;
+  border: 1px solid $border-color-01;
+  border-radius: 6px;
+  color: $text-color;
+}
+
+.highlighter-rouge .highlight {
+  background: $code-background-color;
+}

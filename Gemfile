@@ -26,3 +26,9 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+
+# Fix for "Could not find a JavaScript runtime"
+gem "duktape"
+
+# Required for Jekyll 4.x on Ruby 3.x
+gem "webrick"

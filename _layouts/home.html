@@ -4,6 +4,29 @@ layout: default
 
 <div class="home">
 
+    <section class="hero-split">
+        <div class="hero-left">
+            <h1 class="hero-headline">
+                I'm VESPRO  
+            </h1>
+            I make 
+            <div class="dynamic-txt-container">
+                <ul class="dynamic-txt-list">
+                    <li>Games</li>
+                    <li>Art</li>
+                    <li>Programs</li>
+                    <li>Websites</li>
+                    <li>Games</li> <!-- Duplicate first for smooth loop -->
+                </ul>
+            </div>
+        </div>
+        <div class="hero-right">
+            <p class="hero-text">
+                <!-- TODO -->
+            </p>
+        </div>
+    </section>
+    
     <div class="row">
 
         {% assign projects = site.projects | sort: 'date' | reverse %}

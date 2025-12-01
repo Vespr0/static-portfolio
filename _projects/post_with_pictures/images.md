@@ -34,3 +34,6 @@ Images can be included the post itself:
 
 Note that all paths are relative to the article itself. Consequently the easiest
 way to organise files is to place them in the same directory as the article.
+
+![[Pasted image 20251130091911.png]]
+

@@ -1,0 +1,92 @@
+// HERO SECTION (Split Layout)
+.hero-split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 6rem 0;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    padding: 3rem 0;
+    gap: 2rem;
+  }
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-right {
+  flex: 1;
+  padding-top: 0.5rem; // Align visually with the top of the headline
+}
+
+.hero-headline {
+  font-family: $headings-font-family;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: $text-color;
+  margin: 0;
+  letter-spacing: -0.02em;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.hero-text {
+  font-family: $base-font-family; // Serif for body text in this style often looks good too, but keeping sans for contrast
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: $text-color;
+  margin-bottom: 1.5rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Highlight word (optional styling)
+// Highlight word (optional styling)
+.highlight {
+  // font-style: italic;
+  // color: #555;
+}
+
+// Dynamic Text Scroller
+.dynamic-txt-container {
+  height: 1.2em; // Height of one line
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-left: 0.2em;
+  color: $brand-secondary; // Use the secondary grey color
+}
+
+.dynamic-txt-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  animation: slide-text 8s infinite; // 4 items * 2s each
+  
+  li {
+    height: 1.2em;
+    line-height: 1.2em;
+    font-weight: 700;
+    white-space: nowrap;
+    text-align: left;
+  }
+}
+
+@keyframes slide-text {
+  0%, 20% { transform: translateY(0); }
+  25%, 45% { transform: translateY(-1.2em); }
+  50%, 70% { transform: translateY(-2.4em); }
+  75%, 95% { transform: translateY(-3.6em); }
+  100% { transform: translateY(-4.8em); } // Move to the duplicate, then jump
+}
